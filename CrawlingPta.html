@@ -419,7 +419,7 @@ Building wheels for collected packages: bs4
 </pre></div>
 </div>
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Building wheel for bs4 (setup.py) ... ?25l?25hdone
-  Created wheel for bs4: filename=bs4-0.0.1-py3-none-any.whl size=1256 sha256=b67940ab15ca999e8c3328c04cebc0807c51dad5a584160916ebed26b424b284
+  Created wheel for bs4: filename=bs4-0.0.1-py3-none-any.whl size=1256 sha256=54994e70c8998011a82a8da10fddcf3bfd6edf7b797079853570f73e679afb81
   Stored in directory: /root/.cache/pip/wheels/25/42/45/b773edc52acb16cd2db4cf1a0b47117e2f69bb4eb300ed0e70
 Successfully built bs4
 </pre></div>
@@ -470,7 +470,7 @@ Successfully installed bs4-0.0.1
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># max_pages = 172 # total halaman di website PTA, terbaru februari 2023</span>
 
-<span class="n">r</span> <span class="o">=</span> <span class="n">request_header_url</span><span class="p">(</span><span class="s2">&quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10&quot;</span><span class="p">)</span>
+<span class="n">r</span> <span class="o">=</span> <span class="n">request_header_url</span><span class="p">(</span><span class="s2">&quot;Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:15.0) Gecko/20100101 Firefox/15.0.1&quot;</span><span class="p">,</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/23&quot;</span><span class="p">)</span>
 <span class="n">soup</span> <span class="o">=</span> <span class="n">parse_website</span><span class="p">(</span><span class="n">r</span><span class="p">)</span>
 <span class="n">prettify_web_structure</span><span class="p">(</span><span class="n">soup</span><span class="p">)</span>
 <span class="n">table</span> <span class="o">=</span> <span class="n">get_content_table</span><span class="p">(</span><span class="n">soup</span><span class="p">,</span> <span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;id&quot;</span><span class="p">:</span><span class="s2">&quot;wrapper&quot;</span><span class="p">})</span>
@@ -481,11 +481,11 @@ Successfully installed bs4-0.0.1
 <span class="n">papers</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="k">for</span> <span class="n">pages</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">FIRST_INDEX</span><span class="p">,</span> <span class="n">total_pages</span> <span class="o">+</span> <span class="n">INCREMENT_BY_ONE</span><span class="p">):</span>
 
-    <span class="n">url_link</span> <span class="o">=</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10&quot;</span>
+    <span class="n">url_link</span> <span class="o">=</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/23&quot;</span>
     <span class="n">id_prodi</span> <span class="o">=</span> <span class="n">url_link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="n">LAST_INDEX</span><span class="p">]</span>
     <span class="n">nama_prodi</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
-    <span class="k">if</span> <span class="p">(</span><span class="n">id_prodi</span> <span class="o">==</span> <span class="s2">&quot;31&quot;</span><span class="p">):</span>
-        <span class="n">nama_prodi</span> <span class="o">=</span> <span class="s2">&quot;Sistem Informasi&quot;</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">id_prodi</span> <span class="o">==</span> <span class="s2">&quot;23&quot;</span><span class="p">):</span>
+        <span class="n">nama_prodi</span> <span class="o">=</span> <span class="s2">&quot;Teknik Industri&quot;</span>
 
     <span class="n">r_pages</span> <span class="o">=</span> <span class="n">request_header_url</span><span class="p">(</span><span class="s2">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&quot;</span><span class="p">,</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">url_link</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">pages</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
     <span class="n">soup_pages</span> <span class="o">=</span> <span class="n">parse_website</span><span class="p">(</span><span class="n">r_pages</span><span class="p">)</span>
@@ -524,7 +524,7 @@ Successfully installed bs4-0.0.1
 </div>
 <div class="cell_output docutils container">
 <div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="ne">KeyboardInterrupt</span>Traceback (most recent call last)
-<span class="nn">&lt;ipython-input-4-0f2112f3c49f&gt;</span> in <span class="ni">&lt;cell line: 12&gt;</span><span class="nt">()</span>
+<span class="nn">&lt;ipython-input-4-5c1d2fccfe6b&gt;</span> in <span class="ni">&lt;cell line: 12&gt;</span><span class="nt">()</span>
 <span class="g g-Whitespace">     </span><span class="mi">24</span> 
 <span class="g g-Whitespace">     </span><span class="mi">25</span>     <span class="k">for</span> <span class="n">article_row</span> <span class="ow">in</span> <span class="n">table_pages</span><span class="o">.</span><span class="n">findAll</span><span class="p">(</span><span class="s2">&quot;a&quot;</span><span class="p">,</span> <span class="n">attrs</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;class&quot;</span><span class="p">:</span><span class="s2">&quot;gray button&quot;</span><span class="p">}):</span>
 <span class="ne">---&gt; </span><span class="mi">26</span>         <span class="n">r_article_row</span> <span class="o">=</span> <span class="n">request_header_url</span><span class="p">(</span><span class="s2">&quot;Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36&quot;</span><span class="p">,</span> <span class="n">article_row</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">])</span>
@@ -653,6 +653,268 @@ Successfully installed bs4-0.0.1
 </pre></div>
 </div>
 </div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-324f28f8-9cb8-441e-bfc6-d951025af1ed" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Judul</th>
+      <th>Penulis</th>
+      <th>pembimbing I</th>
+      <th>pembimbing II</th>
+      <th>Abstrak</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>RANCANG BANGUN PENGATUR TEGANGAN OTOMATIS PADA...</td>
+      <td>Achmad Faidi</td>
+      <td>Koko Joni. S.T., M.Eng.</td>
+      <td>Achmad Fiqhi Ibadillah, S.T., M.Sc.</td>
+      <td>Tegangan yang tidak stabil dapat merusak peran...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>SMART GARBAGE BERBASIS INTERNET OF THINGS\n</td>
+      <td>Dandi Fathur Rohim</td>
+      <td>Haryanto. S.T., M.T</td>
+      <td>Koko Joni. S.T., M.Eng</td>
+      <td>Sampah di Indonesia merupakan suatu masalah ya...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Perancangan dan Pembuatan Stop Kontak Berbasis...</td>
+      <td>Reynanda Bagus Widyo Astomo</td>
+      <td></td>
+      <td></td>
+      <td>Pengunaan perangkat elektris dalam kehidupan s...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>PROTOTYPE SISTEM MONITORING DAN PENGENDALIAN P...</td>
+      <td>Moh.Nazilus Sa’din Romdloni</td>
+      <td>Haryanto,ST,.MT</td>
+      <td>Riza Alfita,ST,.MT</td>
+      <td>Indonesia merupakan negara dengan curah hujan ...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Rancang Bangun Sistem Keamanan Parkir Berbasis...</td>
+      <td>Fajar Dwima Wijaya</td>
+      <td>Diana Rahmawati, S.T., M.T</td>
+      <td>Kunto Aji Wibisono, S.T., M.T</td>
+      <td>Sistem pengelolaan tempat parkir pada saat ini...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>162</th>
+      <td>Implementasi Convolutional Neural Network Untu...</td>
+      <td>Prayogo Teguh Wibowo</td>
+      <td>Koko Joni, S.T., M.Eng</td>
+      <td>Achmad Fiqi Ibadillah, S.T., M.Sc</td>
+      <td>Informasi teks merupakan salah satu komponen p...</td>
+    </tr>
+    <tr>
+      <th>163</th>
+      <td>OPTIMALISASI KINERJA PSTN KE VOIP DENGAN MIGRA...</td>
+      <td>KHOLIFATUL SADHIAH</td>
+      <td>Ahmad Ubaidillah Ms.,S.T.,MT.</td>
+      <td>Haryanto, S.T., M.T.</td>
+      <td>Public Switched Telephone Network (PSTN) adala...</td>
+    </tr>
+    <tr>
+      <th>164</th>
+      <td>MONITORING BAHAN BAKAR GENERATOR DENGAN MENGGU...</td>
+      <td>Tantra Juang Ilhami</td>
+      <td>Miftachul Ulum ST,.MT.</td>
+      <td>Riza Alfita, S.T., M.T.</td>
+      <td>Pemakaian energi listrik semakin lama semakin ...</td>
+    </tr>
+    <tr>
+      <th>165</th>
+      <td>RANCANGAN SISTEM MOBILE ROBOT SOUND LOCALIZATI...</td>
+      <td>ACHMAD NUR RIVAI</td>
+      <td>DIANA RAHMAWATI,ST.,M.T.</td>
+      <td>ACHMAD FIQHI IBADILLAH,S.T.,M.Sc</td>
+      <td>Sistem kontrol robot beroda pada umumnya berbe...</td>
+    </tr>
+    <tr>
+      <th>166</th>
+      <td>APLIKASI PENGENALAN INFORMASI OBJEK BERSEJARAH...</td>
+      <td>Noer Indra Afriansya</td>
+      <td>Miftachul Ulum, S.T., M.T.</td>
+      <td>Riza Alfita, S.T., M.T.</td>
+      <td>Museum Keraton Sumenep merupakan salah satu de...</td>
+    </tr>
+  </tbody>
+</table>
+<p>167 rows × 5 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-324f28f8-9cb8-441e-bfc6-d951025af1ed')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-324f28f8-9cb8-441e-bfc6-d951025af1ed button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-324f28f8-9cb8-441e-bfc6-d951025af1ed');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+<div id="df-aea494ac-da29-4e39-ae43-4bdca9901f73">
+  <button class="colab-df-quickchart" onclick="quickchart('df-aea494ac-da29-4e39-ae43-4bdca9901f73')"
+            title="Suggest charts."
+            style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+  </button>
+
+<style>
+  .colab-df-quickchart {
+    background-color: #E8F0FE;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: #1967D2;
+    height: 32px;
+    padding: 0 0 0 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: #E2EBFA;
+    box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: #174EA6;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+    background-color: #3B4455;
+    fill: #D2E3FC;
+  }
+
+  [theme=dark] .colab-df-quickchart:hover {
+    background-color: #434B5C;
+    box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+    fill: #FFFFFF;
+  }
+</style>
+
+  <script>
+    async function quickchart(key) {
+      const charts = await google.colab.kernel.invokeFunction(
+          'suggestCharts', [key], {});
+    }
+    (() => {
+      let quickchartButtonEl =
+        document.querySelector('#df-aea494ac-da29-4e39-ae43-4bdca9901f73 button');
+      quickchartButtonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+    })();
+  </script>
+</div>
+    </div>
+  </div>
+</div></div>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
