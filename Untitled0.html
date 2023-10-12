@@ -543,14 +543,14 @@ document.write(`
 <p>Ini adalah langkah untuk membaca data dari file CSV menggunakan Pandas. Data tersebut dimuat ke dalam DataFrame dengan nama <code class="docutils literal notranslate"><span class="pre">df</span></code>. DataFrame ini digunakan sebagai basis untuk analisis teks yang akan dilakukan.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/ppw/tugas/PTA.csv&quot;</span><span class="p">)</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/ppw/tugas/dataset/ptalabel.csv&#39;</span><span class="p">)</span>
 <span class="n">df</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-7e5699e3-fd50-40c3-8772-3a01e2e7c0ea" class="colab-df-container">
+  <div id="df-dcf19627-3bbd-481d-bda1-1d2a16203816" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -571,19 +571,21 @@ document.write(`
       <th></th>
       <th>Judul</th>
       <th>Penulis</th>
-      <th>Pembimbing I</th>
-      <th>Pembimbing II</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
       <th>Abstrak</th>
+      <th>Label</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...</td>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
       <td>A.Ubaidillah S.Kom</td>
       <td>Budi Setyono M.T</td>
       <td>Hermawan S.T</td>
       <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>1</th>
@@ -592,14 +594,16 @@ document.write(`
       <td>Drs. Budi Soesilo, MT</td>
       <td>Koko Joni, ST</td>
       <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\nEN...</td>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
       <td>Akhmad Suyandi, S.Kom</td>
       <td>Drs. Budi Soesilo, M.T</td>
       <td>Hermawan, ST, MT</td>
       <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>3</th>
@@ -608,6 +612,7 @@ document.write(`
       <td>Mulaab, S.Si., M.Kom</td>
       <td>Firli Irhamni, ST., M.Kom</td>
       <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>4</th>
@@ -616,9 +621,11 @@ document.write(`
       <td>Arik Kurniawati, S.Kom., M.T.</td>
       <td>Haryanto, S.T., M.T.</td>
       <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>...</th>
+      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -632,6 +639,7 @@ document.write(`
       <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
       <td>Sri Herawati, S.Kom., M.Kom</td>
       <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>854</th>
@@ -640,6 +648,7 @@ document.write(`
       <td>Achmad Jauhari, S.T., M.Kom</td>
       <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
       <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>855</th>
@@ -648,6 +657,7 @@ document.write(`
       <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
       <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
       <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>856</th>
@@ -656,6 +666,7 @@ document.write(`
       <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
       <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
       <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>857</th>
@@ -664,15 +675,16 @@ document.write(`
       <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
       <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
       <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
     </tr>
   </tbody>
 </table>
-<p>858 rows × 5 columns</p>
+<p>858 rows × 6 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-7e5699e3-fd50-40c3-8772-3a01e2e7c0ea')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-dcf19627-3bbd-481d-bda1-1d2a16203816')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -724,12 +736,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-7e5699e3-fd50-40c3-8772-3a01e2e7c0ea button.colab-df-convert');
+        document.querySelector('#df-dcf19627-3bbd-481d-bda1-1d2a16203816 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-7e5699e3-fd50-40c3-8772-3a01e2e7c0ea');
+        const element = document.querySelector('#df-dcf19627-3bbd-481d-bda1-1d2a16203816');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -765,11 +777,12 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Judul             6
-Penulis          10
-Pembimbing I     10
-Pembimbing II    11
-Abstrak          30
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Judul                   6
+Penulis                10
+Dosen Pembimbing I     10
+Dosen Pembimbing II    11
+Abstrak                29
+Label                   0
 dtype: int64
 </pre></div>
 </div>
@@ -783,12 +796,25 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Judul            0
-Penulis          0
-Pembimbing I     0
-Pembimbing II    0
-Abstrak          0
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Judul                  0
+Penulis                0
+Dosen Pembimbing I     0
+Dosen Pembimbing II    0
+Abstrak                0
+Label                  0
 dtype: int64
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">shape</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(828, 6)
 </pre></div>
 </div>
 </div>
@@ -820,7 +846,7 @@ dtype: int64
 855    Klasifikasi citra merupakan proses pengelompok...
 856    Identifikasi atribut pejalan kaki merupakan sa...
 857    Topik deteksi objek telah menarik perhatian ya...
-Name: Cleaning, Length: 827, dtype: object
+Name: Cleaning, Length: 828, dtype: object
 </pre></div>
 </div>
 </div>
@@ -849,7 +875,7 @@ Name: Cleaning, Length: 827, dtype: object
 855    None
 856    None
 857    None
-Name: Cleaning, Length: 827, dtype: object
+Name: Cleaning, Length: 828, dtype: object
 </pre></div>
 </div>
 </div>
@@ -882,7 +908,7 @@ Name: Cleaning, Length: 827, dtype: object
 855    [klasifikasi, citra, merupakan, proses, pengel...
 856    [identifikasi, atribut, pejalan, kaki, merupak...
 857    [topik, deteksi, objek, telah, menarik, perhat...
-Name: Tokenizing, Length: 827, dtype: object
+Name: Tokenizing, Length: 828, dtype: object
 </pre></div>
 </div>
 </div>
@@ -900,7 +926,7 @@ Name: Tokenizing, Length: 827, dtype: object
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-cece388d-44e8-4bdd-868f-ac9fe610ebbe" class="colab-df-container">
+  <div id="df-36e5b12b-03fd-4034-8384-1f345d385093" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -921,9 +947,10 @@ Name: Tokenizing, Length: 827, dtype: object
       <th></th>
       <th>Judul</th>
       <th>Penulis</th>
-      <th>Pembimbing I</th>
-      <th>Pembimbing II</th>
+      <th>Dosen Pembimbing I</th>
+      <th>Dosen Pembimbing II</th>
       <th>Abstrak</th>
+      <th>Label</th>
       <th>Cleaning</th>
       <th>Tokenizing</th>
       <th>Count Word</th>
@@ -932,11 +959,12 @@ Name: Tokenizing, Length: 827, dtype: object
   <tbody>
     <tr>
       <th>0</th>
-      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE \...</td>
+      <td>PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...</td>
       <td>A.Ubaidillah S.Kom</td>
       <td>Budi Setyono M.T</td>
       <td>Hermawan S.T</td>
       <td>Sistem  informasi  akademik  (SIAKAD) merupaka...</td>
+      <td>RPL</td>
       <td>Sistem  informasi  akademik  SIAKAD merupakan ...</td>
       <td>[sistem, informasi, akademik, siakad, merupaka...</td>
       <td>150</td>
@@ -948,17 +976,19 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Drs. Budi Soesilo, MT</td>
       <td>Koko Joni, ST</td>
       <td>Berjalannya koneksi jaringan komputer dengan l...</td>
+      <td>RPL</td>
       <td>Berjalannya koneksi jaringan komputer dengan l...</td>
       <td>[berjalannya, koneksi, jaringan, komputer, den...</td>
       <td>204</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK\nEN...</td>
+      <td>RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...</td>
       <td>Akhmad Suyandi, S.Kom</td>
       <td>Drs. Budi Soesilo, M.T</td>
       <td>Hermawan, ST, MT</td>
       <td>Web server adalah sebuah perangkat lunak serve...</td>
+      <td>RPL</td>
       <td>Web server adalah sebuah perangkat lunak serve...</td>
       <td>[web, server, adalah, sebuah, perangkat, lunak...</td>
       <td>182</td>
@@ -970,6 +1000,7 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Mulaab, S.Si., M.Kom</td>
       <td>Firli Irhamni, ST., M.Kom</td>
       <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
+      <td>KK</td>
       <td>Penjadwalan  kuliah  di  Perguruan  Tinggi  me...</td>
       <td>[penjadwalan, kuliah, di, perguruan, tinggi, m...</td>
       <td>134</td>
@@ -981,12 +1012,14 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Arik Kurniawati, S.Kom., M.T.</td>
       <td>Haryanto, S.T., M.T.</td>
       <td>Seiring perkembangan teknologi yang ada diduni...</td>
+      <td>KK</td>
       <td>Seiring perkembangan teknologi yang ada diduni...</td>
       <td>[seiring, perkembangan, teknologi, yang, ada, ...</td>
       <td>137</td>
     </tr>
     <tr>
       <th>...</th>
+      <td>...</td>
       <td>...</td>
       <td>...</td>
       <td>...</td>
@@ -1003,9 +1036,10 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Eka Mala Sari Rochman, S.Kom., M.Kom</td>
       <td>Sri Herawati, S.Kom., M.Kom</td>
       <td>Investasi saham selama ini memiliki resiko ker...</td>
+      <td>KK</td>
       <td>Investasi saham selama ini memiliki resiko ker...</td>
       <td>[investasi, saham, selama, ini, memiliki, resi...</td>
-      <td>190</td>
+      <td>173</td>
     </tr>
     <tr>
       <th>854</th>
@@ -1014,6 +1048,7 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Achmad Jauhari, S.T., M.Kom</td>
       <td>Ika Oktavia Suzanti, S.Kom., M.Cs</td>
       <td>Information Retrieval (IR) merupakan pengambil...</td>
+      <td>KK</td>
       <td>Information Retrieval IR merupakan pengambilan...</td>
       <td>[information, retrieval, ir, merupakan, pengam...</td>
       <td>134</td>
@@ -1025,6 +1060,7 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
       <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
       <td>Klasifikasi citra merupakan proses pengelompok...</td>
+      <td>KK</td>
       <td>Klasifikasi citra merupakan proses pengelompok...</td>
       <td>[klasifikasi, citra, merupakan, proses, pengel...</td>
       <td>259</td>
@@ -1036,6 +1072,7 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
       <td>Prof. Dr. Arief Muntasa, S.Si., M.MT.</td>
       <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
+      <td>KK</td>
       <td>Identifikasi atribut pejalan kaki merupakan sa...</td>
       <td>[identifikasi, atribut, pejalan, kaki, merupak...</td>
       <td>211</td>
@@ -1047,18 +1084,19 @@ Name: Tokenizing, Length: 827, dtype: object
       <td>Dr. Indah Agustien Siradjuddin, S.Kom., M.Kom.</td>
       <td>Moch. Kautsar Sophan, S.Kom., M.MT.</td>
       <td>Topik deteksi objek telah menarik perhatian ya...</td>
+      <td>KK</td>
       <td>Topik deteksi objek telah menarik perhatian ya...</td>
       <td>[topik, deteksi, objek, telah, menarik, perhat...</td>
       <td>155</td>
     </tr>
   </tbody>
 </table>
-<p>827 rows × 8 columns</p>
+<p>828 rows × 9 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-cece388d-44e8-4bdd-868f-ac9fe610ebbe')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-36e5b12b-03fd-4034-8384-1f345d385093')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1110,12 +1148,12 @@ Name: Tokenizing, Length: 827, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-cece388d-44e8-4bdd-868f-ac9fe610ebbe button.colab-df-convert');
+        document.querySelector('#df-36e5b12b-03fd-4034-8384-1f345d385093 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-cece388d-44e8-4bdd-868f-ac9fe610ebbe');
+        const element = document.querySelector('#df-36e5b12b-03fd-4034-8384-1f345d385093');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1165,12 +1203,12 @@ Name: Tokenizing, Length: 827, dtype: object
 3      penjadwalan kuliah perguruan kompleks permasal...
 4      seiring perkembangan teknologi didunia muncul ...
                              ...                        
-853    investasi saham memiliki resiko kerugian perge...
+853    investasi saham memiliki resiko kerugian dikar...
 854    information retrieval ir pengambilan informasi...
 855    klasifikasi citra proses pengelompokan piksel ...
 856    identifikasi atribut pejalan kaki salah peneli...
 857    topik deteksi objek menarik perhatian perkemba...
-Name: Full Text, Length: 827, dtype: object
+Name: Full Text, Length: 828, dtype: object
 </pre></div>
 </div>
 </div>
@@ -1199,20 +1237,20 @@ Name: Full Text, Length: 827, dtype: object
 <p>Fungsi <code class="docutils literal notranslate"><span class="pre">pandasOneHotEncoder</span></code> digunakan untuk melakukan one-hot encoding pada token-token kata yang telah dibersihkan dan memiliki stopword yang dihapus. Hasilnya adalah DataFrame yang mewakili keberadaan atau ketiadaan setiap kata dalam setiap dokumen.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pandasOneHotEncoder</span><span class="p">(</span><span class="n">dokumens</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">pandasOneHotEncoder</span><span class="p">(</span><span class="n">dokumens</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
   <span class="n">encoder</span>  <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">dokumens</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">pd</span><span class="o">.</span><span class="n">Series</span><span class="p">)</span><span class="o">.</span><span class="n">stack</span><span class="p">())</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">level</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
-  <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dokumens</span><span class="p">,</span> <span class="n">encoder</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+  <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">dokumens</span><span class="p">,</span> <span class="n">encoder</span><span class="p">,</span> <span class="n">label</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 
   <span class="k">return</span> <span class="n">df</span>
 
-<span class="n">oneHotEncoder</span> <span class="o">=</span> <span class="n">pandasOneHotEncoder</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stopword Removal&#39;</span><span class="p">])</span>
+<span class="n">oneHotEncoder</span> <span class="o">=</span> <span class="n">pandasOneHotEncoder</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Stopword Removal&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">])</span>
 <span class="n">oneHotEncoder</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b3ea8dd7-89db-4425-905a-c5276e1a9986" class="colab-df-container">
+  <div id="df-247f4660-7d3c-4c9a-8c90-aedce8033f76" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1242,7 +1280,6 @@ Name: Full Text, Length: 827, dtype: object
       <th>abjad</th>
       <th>absensi</th>
       <th>...</th>
-      <th>zara</th>
       <th>zat</th>
       <th>zcz</th>
       <th>zf</th>
@@ -1252,6 +1289,7 @@ Name: Full Text, Length: 827, dtype: object
       <th>zoom</th>
       <th>zucara</th>
       <th>zungu</th>
+      <th>Label</th>
     </tr>
   </thead>
   <tbody>
@@ -1277,7 +1315,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1301,7 +1339,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1325,7 +1363,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1349,7 +1387,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1373,7 +1411,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1421,7 +1459,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>854</th>
@@ -1445,7 +1483,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>855</th>
@@ -1469,7 +1507,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>856</th>
@@ -1493,7 +1531,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>857</th>
@@ -1517,16 +1555,16 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
   </tbody>
 </table>
-<p>827 rows × 8746 columns</p>
+<p>828 rows × 9075 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b3ea8dd7-89db-4425-905a-c5276e1a9986')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-247f4660-7d3c-4c9a-8c90-aedce8033f76')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1578,12 +1616,12 @@ Name: Full Text, Length: 827, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b3ea8dd7-89db-4425-905a-c5276e1a9986 button.colab-df-convert');
+        document.querySelector('#df-247f4660-7d3c-4c9a-8c90-aedce8033f76 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b3ea8dd7-89db-4425-905a-c5276e1a9986');
+        const element = document.querySelector('#df-247f4660-7d3c-4c9a-8c90-aedce8033f76');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1625,24 +1663,25 @@ Name: Full Text, Length: 827, dtype: object
 <p>Fungsi <code class="docutils literal notranslate"><span class="pre">tfidf</span></code> digunakan untuk melakukan TF-IDF vectorization pada teks yang telah dibersihkan dan memiliki stopword yang dihapus. Hasilnya adalah representasi numerik dari dokumen menggunakan skema TF-IDF.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tfidf</span><span class="p">(</span><span class="n">dokumen</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tfidf</span><span class="p">(</span><span class="n">dokumen</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
   <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">TfidfVectorizer</span><span class="p">()</span>
   <span class="n">x</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dokumen</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
   <span class="n">terms</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
 
   <span class="n">final_tfidf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span>
   <span class="n">final_tfidf</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dokumen&#39;</span><span class="p">,</span> <span class="n">dokumen</span><span class="p">)</span>
+  <span class="n">final_tfidf</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">final_tfidf</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span><span class="s1">&#39;Label&#39;</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
 
   <span class="k">return</span> <span class="p">(</span><span class="n">vectorizer</span><span class="p">,</span> <span class="n">final_tfidf</span><span class="p">)</span>
 
-<span class="n">tfidf_vectorizer</span><span class="p">,</span> <span class="n">final_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Full Text&#39;</span><span class="p">])</span>
+<span class="n">tfidf_vectorizer</span><span class="p">,</span> <span class="n">final_tfidf</span> <span class="o">=</span> <span class="n">tfidf</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Full Text&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">])</span>
 <span class="n">final_tfidf</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-ecd9c8ef-b1b3-48ed-9cd0-1d8ec10d780b" class="colab-df-container">
+  <div id="df-d7f90bab-429d-4235-95a4-7a306cfc6791" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1672,7 +1711,6 @@ Name: Full Text, Length: 827, dtype: object
       <th>absensi</th>
       <th>absolut</th>
       <th>...</th>
-      <th>zara</th>
       <th>zat</th>
       <th>zcz</th>
       <th>zf</th>
@@ -1682,6 +1720,7 @@ Name: Full Text, Length: 827, dtype: object
       <th>zoom</th>
       <th>zucara</th>
       <th>zungu</th>
+      <th>Label</th>
     </tr>
   </thead>
   <tbody>
@@ -1707,7 +1746,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>1</th>
@@ -1731,7 +1770,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>2</th>
@@ -1755,7 +1794,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>3</th>
@@ -1779,7 +1818,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>4</th>
@@ -1803,7 +1842,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>...</th>
@@ -1830,30 +1869,6 @@ Name: Full Text, Length: 827, dtype: object
       <td>...</td>
     </tr>
     <tr>
-      <th>822</th>
-      <td>tim futsal pelatih seleksi pemain pemain terba...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
       <th>823</th>
       <td>kurangnya pemahaman gejala penyakit saluran pe...</td>
       <td>0.0</td>
@@ -1875,7 +1890,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>824</th>
@@ -1899,7 +1914,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>825</th>
@@ -1923,7 +1938,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>826</th>
@@ -1947,16 +1962,40 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>827</th>
+      <td>sistem temu informasi alternatif metode simila...</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>KK</td>
     </tr>
   </tbody>
 </table>
-<p>827 rows × 8721 columns</p>
+<p>828 rows × 9050 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ecd9c8ef-b1b3-48ed-9cd0-1d8ec10d780b')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d7f90bab-429d-4235-95a4-7a306cfc6791')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -2008,12 +2047,12 @@ Name: Full Text, Length: 827, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ecd9c8ef-b1b3-48ed-9cd0-1d8ec10d780b button.colab-df-convert');
+        document.querySelector('#df-d7f90bab-429d-4235-95a4-7a306cfc6791 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ecd9c8ef-b1b3-48ed-9cd0-1d8ec10d780b');
+        const element = document.querySelector('#df-d7f90bab-429d-4235-95a4-7a306cfc6791');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2055,7 +2094,7 @@ Name: Full Text, Length: 827, dtype: object
 <p>Fungsi <code class="docutils literal notranslate"><span class="pre">term_freq</span></code> digunakan untuk melakukan Term Frequency (TF) vectorization pada teks yang telah dibersihkan dan memiliki stopword yang dihapus. Hasilnya adalah representasi numerik dari dokumen menggunakan skema Term Frequency.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">term_freq</span><span class="p">(</span><span class="n">dokumens</span><span class="p">):</span>
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">term_freq</span><span class="p">(</span><span class="n">dokumens</span><span class="p">,</span> <span class="n">label</span><span class="p">):</span>
   <span class="c1"># Buat objek CountVectorizer</span>
   <span class="n">vectorizer</span> <span class="o">=</span> <span class="n">CountVectorizer</span><span class="p">()</span>
   <span class="n">tf_matrix</span> <span class="o">=</span> <span class="n">vectorizer</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">dokumens</span><span class="p">)</span><span class="o">.</span><span class="n">toarray</span><span class="p">()</span>
@@ -2063,17 +2102,18 @@ Name: Full Text, Length: 827, dtype: object
 
   <span class="n">final_tf</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tf_matrix</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">terms</span><span class="p">)</span>
   <span class="n">final_tf</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dokumen&#39;</span><span class="p">,</span> <span class="n">dokumens</span><span class="p">)</span>
+  <span class="n">final_tf</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">final_tf</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span><span class="s1">&#39;Label&#39;</span><span class="p">,</span> <span class="n">label</span><span class="p">)</span>
 
   <span class="k">return</span> <span class="p">(</span><span class="n">vectorizer</span><span class="p">,</span> <span class="n">final_tf</span><span class="p">,</span> <span class="n">tf_matrix</span><span class="p">,</span> <span class="n">terms</span><span class="p">)</span>
 
-<span class="n">tf_vectorizer</span><span class="p">,</span> <span class="n">final_tf</span><span class="p">,</span> <span class="n">tf_matrix</span><span class="p">,</span> <span class="n">tf_terms</span> <span class="o">=</span> <span class="n">term_freq</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Full Text&#39;</span><span class="p">])</span>
+<span class="n">tf_vectorizer</span><span class="p">,</span> <span class="n">final_tf</span><span class="p">,</span> <span class="n">tf_matrix</span><span class="p">,</span> <span class="n">tf_terms</span> <span class="o">=</span> <span class="n">term_freq</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Full Text&#39;</span><span class="p">],</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">])</span>
 <span class="n">final_tf</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-27357a46-f808-4616-ae5c-5d26778ee96d" class="colab-df-container">
+  <div id="df-bfaed3f2-2771-4ce7-8ee0-d35160e4f241" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2103,7 +2143,6 @@ Name: Full Text, Length: 827, dtype: object
       <th>absensi</th>
       <th>absolut</th>
       <th>...</th>
-      <th>zara</th>
       <th>zat</th>
       <th>zcz</th>
       <th>zf</th>
@@ -2113,6 +2152,7 @@ Name: Full Text, Length: 827, dtype: object
       <th>zoom</th>
       <th>zucara</th>
       <th>zungu</th>
+      <th>Label</th>
     </tr>
   </thead>
   <tbody>
@@ -2138,7 +2178,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>1</th>
@@ -2162,7 +2202,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>2</th>
@@ -2186,7 +2226,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>3</th>
@@ -2210,7 +2250,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>4</th>
@@ -2234,7 +2274,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2261,30 +2301,6 @@ Name: Full Text, Length: 827, dtype: object
       <td>...</td>
     </tr>
     <tr>
-      <th>822</th>
-      <td>tim futsal pelatih seleksi pemain pemain terba...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
-    <tr>
       <th>823</th>
       <td>kurangnya pemahaman gejala penyakit saluran pe...</td>
       <td>0</td>
@@ -2306,7 +2322,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>824</th>
@@ -2330,7 +2346,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>825</th>
@@ -2354,7 +2370,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
-      <td>0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>826</th>
@@ -2378,16 +2394,40 @@ Name: Full Text, Length: 827, dtype: object
       <td>0</td>
       <td>0</td>
       <td>0</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>827</th>
+      <td>sistem temu informasi alternatif metode simila...</td>
       <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>KK</td>
     </tr>
   </tbody>
 </table>
-<p>827 rows × 8721 columns</p>
+<p>828 rows × 9050 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-27357a46-f808-4616-ae5c-5d26778ee96d')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-bfaed3f2-2771-4ce7-8ee0-d35160e4f241')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -2439,12 +2479,12 @@ Name: Full Text, Length: 827, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-27357a46-f808-4616-ae5c-5d26778ee96d button.colab-df-convert');
+        document.querySelector('#df-bfaed3f2-2771-4ce7-8ee0-d35160e4f241 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-27357a46-f808-4616-ae5c-5d26778ee96d');
+        const element = document.querySelector('#df-bfaed3f2-2771-4ce7-8ee0-d35160e4f241');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2466,6 +2506,52 @@ Name: Full Text, Length: 827, dtype: object
     </div>
   </div>
   </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;Judul&#39;</span><span class="p">]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0      PERANCANGAN DAN IMPLEMENTASI SISTEM DATABASE  ...
+1      APLIKASI KONTROL DAN MONITORING JARINGAN KOMPU...
+2      RANCANG BANGUN APLIKASI PROXY SERVER UNTUK ENK...
+3      SISTEM PENDUKUNG KEPUTUSAN OPTIMASI PENJADWALA...
+4      SISTEM AUGMENTED REALITY ANIMASI BENDA BERGERA...
+                             ...                        
+853    PENERAPAN ALGORITMA LONG-SHORT TERM MEMORY UNT...
+854    SISTEM PENCARIAN TEKS AL-QURAN TERJEMAHAN BERB...
+855    KLASIFIKASI KOMPLEKSITAS VISUAL CITRA SAMPAH M...
+856    IDENTIFIKASI BINER ATRIBUT PEJALAN KAKI MENGGU...
+857    DETEKSI OBJEK MANUSIA BERBASIS ONE STAGE DETEC...
+Name: Judul, Length: 828, dtype: object
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">final_tf</span><span class="o">.</span><span class="n">isnull</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Dokumen    30
+aalysis     0
+aam         0
+ab          0
+abad        0
+           ..
+zoning      0
+zoom        0
+zucara      0
+zungu       0
+Label      30
+Length: 9050, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="id2">
@@ -2491,13 +2577,14 @@ Name: Full Text, Length: 827, dtype: object
 
 <span class="n">df_logarithm_freq</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">tf_matrix</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">tf_terms</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">logarithm_freq</span><span class="p">)</span>
 <span class="n">df_logarithm_freq</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="s1">&#39;Dokumen&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Full Text&#39;</span><span class="p">])</span>
+<span class="n">df_logarithm_freq</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">df_logarithm_freq</span><span class="o">.</span><span class="n">columns</span><span class="p">),</span><span class="s1">&#39;Label&#39;</span><span class="p">,</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;Label&#39;</span><span class="p">])</span>
 <span class="n">df_logarithm_freq</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b0943024-ec0e-4219-9d5d-860de21e8c88" class="colab-df-container">
+  <div id="df-91457f42-1511-4320-b442-1c8e36af1c41" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2527,7 +2614,6 @@ Name: Full Text, Length: 827, dtype: object
       <th>absensi</th>
       <th>absolut</th>
       <th>...</th>
-      <th>zara</th>
       <th>zat</th>
       <th>zcz</th>
       <th>zf</th>
@@ -2537,6 +2623,7 @@ Name: Full Text, Length: 827, dtype: object
       <th>zoom</th>
       <th>zucara</th>
       <th>zungu</th>
+      <th>Label</th>
     </tr>
   </thead>
   <tbody>
@@ -2562,7 +2649,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>1</th>
@@ -2586,7 +2673,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>2</th>
@@ -2610,7 +2697,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>RPL</td>
     </tr>
     <tr>
       <th>3</th>
@@ -2634,7 +2721,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>4</th>
@@ -2658,7 +2745,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>...</th>
@@ -2685,30 +2772,6 @@ Name: Full Text, Length: 827, dtype: object
       <td>...</td>
     </tr>
     <tr>
-      <th>822</th>
-      <td>tim futsal pelatih seleksi pemain pemain terba...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>...</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-      <td>0.0</td>
-    </tr>
-    <tr>
       <th>823</th>
       <td>kurangnya pemahaman gejala penyakit saluran pe...</td>
       <td>0.0</td>
@@ -2730,7 +2793,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>824</th>
@@ -2754,7 +2817,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>825</th>
@@ -2778,7 +2841,7 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
-      <td>0.0</td>
+      <td>KK</td>
     </tr>
     <tr>
       <th>826</th>
@@ -2802,16 +2865,40 @@ Name: Full Text, Length: 827, dtype: object
       <td>0.0</td>
       <td>0.0</td>
       <td>0.0</td>
+      <td>KK</td>
+    </tr>
+    <tr>
+      <th>827</th>
+      <td>sistem temu informasi alternatif metode simila...</td>
       <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>...</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>0.0</td>
+      <td>KK</td>
     </tr>
   </tbody>
 </table>
-<p>827 rows × 8721 columns</p>
+<p>828 rows × 9050 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b0943024-ec0e-4219-9d5d-860de21e8c88')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-91457f42-1511-4320-b442-1c8e36af1c41')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -2863,12 +2950,12 @@ Name: Full Text, Length: 827, dtype: object
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b0943024-ec0e-4219-9d5d-860de21e8c88 button.colab-df-convert');
+        document.querySelector('#df-91457f42-1511-4320-b442-1c8e36af1c41 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b0943024-ec0e-4219-9d5d-860de21e8c88');
+        const element = document.querySelector('#df-91457f42-1511-4320-b442-1c8e36af1c41');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});

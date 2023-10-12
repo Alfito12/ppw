@@ -65,6 +65,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'Implementasi LDA';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="&lt;no title&gt;" href="Lda%20dan%20Klasifikasi.html" />
     <link rel="prev" title="Term Frequency" href="Preprocessing.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -418,7 +419,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5c888d5c-c626-4841-ac34-1cd94f5a2fca" class="colab-df-container">
+  <div id="df-432d24e0-28cd-4509-87ba-5866bf9535bc" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -606,6 +607,30 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
+      <th>822</th>
+      <td>tim futsal pelatih seleksi pemain pemain terba...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
       <th>823</th>
       <td>kurangnya pemahaman gejala penyakit saluran pe...</td>
       <td>0</td>
@@ -701,38 +726,14 @@ document.write(`
       <td>0</td>
       <td>0</td>
     </tr>
-    <tr>
-      <th>827</th>
-      <td>sistem temu informasi alternatif metode simila...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
   </tbody>
 </table>
-<p>828 rows × 8722 columns</p>
+<p>827 rows × 8721 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5c888d5c-c626-4841-ac34-1cd94f5a2fca')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-432d24e0-28cd-4509-87ba-5866bf9535bc')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -784,12 +785,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5c888d5c-c626-4841-ac34-1cd94f5a2fca button.colab-df-convert');
+        document.querySelector('#df-432d24e0-28cd-4509-87ba-5866bf9535bc button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5c888d5c-c626-4841-ac34-1cd94f5a2fca');
+        const element = document.querySelector('#df-432d24e0-28cd-4509-87ba-5866bf9535bc');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -821,7 +822,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-27dace29-a58a-4a01-92aa-9d98f8d0f75a" class="colab-df-container">
+  <div id="df-1d7b7a03-fd71-4208-accb-fff24687061e" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1009,6 +1010,30 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
+      <th>822</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
       <th>823</th>
       <td>0</td>
       <td>0</td>
@@ -1104,38 +1129,14 @@ document.write(`
       <td>0</td>
       <td>0</td>
     </tr>
-    <tr>
-      <th>827</th>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>...</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-      <td>0</td>
-    </tr>
   </tbody>
 </table>
-<p>828 rows × 8721 columns</p>
+<p>827 rows × 8720 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-27dace29-a58a-4a01-92aa-9d98f8d0f75a')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-1d7b7a03-fd71-4208-accb-fff24687061e')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1187,12 +1188,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-27dace29-a58a-4a01-92aa-9d98f8d0f75a button.colab-df-convert');
+        document.querySelector('#df-1d7b7a03-fd71-4208-accb-fff24687061e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-27dace29-a58a-4a01-92aa-9d98f8d0f75a');
+        const element = document.querySelector('#df-1d7b7a03-fd71-4208-accb-fff24687061e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1238,7 +1239,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1c4a6511-16a8-4fce-bfca-b50340b16c1a" class="colab-df-container">
+  <div id="df-d84fb310-eb29-4fa3-a375-8622c5046ae1" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1267,36 +1268,36 @@ document.write(`
     <tr>
       <th>0</th>
       <td>sistem informasi akademik siakad sistem inform...</td>
-      <td>0.568065</td>
       <td>0.001215</td>
-      <td>0.430719</td>
+      <td>0.997569</td>
+      <td>0.001215</td>
     </tr>
     <tr>
       <th>1</th>
       <td>berjalannya koneksi jaringan komputer lancar g...</td>
-      <td>0.998100</td>
       <td>0.000950</td>
+      <td>0.998100</td>
       <td>0.000950</td>
     </tr>
     <tr>
       <th>2</th>
       <td>web server perangkat lunak server berfungsi me...</td>
-      <td>0.653844</td>
       <td>0.000915</td>
-      <td>0.345241</td>
+      <td>0.998170</td>
+      <td>0.000915</td>
     </tr>
     <tr>
       <th>3</th>
       <td>penjadwalan kuliah perguruan kompleks permasal...</td>
+      <td>0.825974</td>
+      <td>0.172540</td>
       <td>0.001486</td>
-      <td>0.001486</td>
-      <td>0.997027</td>
     </tr>
     <tr>
       <th>4</th>
       <td>seiring perkembangan teknologi didunia muncul ...</td>
-      <td>0.997599</td>
-      <td>0.001201</td>
+      <td>0.042393</td>
+      <td>0.956406</td>
       <td>0.001201</td>
     </tr>
     <tr>
@@ -1307,48 +1308,48 @@ document.write(`
       <td>...</td>
     </tr>
     <tr>
+      <th>822</th>
+      <td>tim futsal pelatih seleksi pemain pemain terba...</td>
+      <td>0.041966</td>
+      <td>0.000825</td>
+      <td>0.957210</td>
+    </tr>
+    <tr>
       <th>823</th>
       <td>kurangnya pemahaman gejala penyakit saluran pe...</td>
-      <td>0.000825</td>
-      <td>0.803877</td>
-      <td>0.195299</td>
+      <td>0.997509</td>
+      <td>0.001246</td>
+      <td>0.001246</td>
     </tr>
     <tr>
       <th>824</th>
       <td>data set hilang utama studi bersifat substansi...</td>
-      <td>0.162383</td>
-      <td>0.836372</td>
-      <td>0.001246</td>
+      <td>0.596511</td>
+      <td>0.000636</td>
+      <td>0.402853</td>
     </tr>
     <tr>
       <th>825</th>
       <td>proses seleksi penerimaan tenaga kerja faktor ...</td>
-      <td>0.000636</td>
-      <td>0.998728</td>
-      <td>0.000636</td>
+      <td>0.998453</td>
+      <td>0.000774</td>
+      <td>0.000774</td>
     </tr>
     <tr>
       <th>826</th>
       <td>sapi salah hewan ternak komoditi utama bahan p...</td>
-      <td>0.000773</td>
-      <td>0.476829</td>
-      <td>0.522397</td>
-    </tr>
-    <tr>
-      <th>827</th>
-      <td>sistem temu informasi alternatif metode simila...</td>
-      <td>0.113477</td>
-      <td>0.071889</td>
-      <td>0.814635</td>
+      <td>0.997785</td>
+      <td>0.001108</td>
+      <td>0.001108</td>
     </tr>
   </tbody>
 </table>
-<p>828 rows × 4 columns</p>
+<p>827 rows × 4 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-1c4a6511-16a8-4fce-bfca-b50340b16c1a')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d84fb310-eb29-4fa3-a375-8622c5046ae1')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1400,12 +1401,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-1c4a6511-16a8-4fce-bfca-b50340b16c1a button.colab-df-convert');
+        document.querySelector('#df-d84fb310-eb29-4fa3-a375-8622c5046ae1 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-1c4a6511-16a8-4fce-bfca-b50340b16c1a');
+        const element = document.querySelector('#df-d84fb310-eb29-4fa3-a375-8622c5046ae1');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1435,7 +1436,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8722,)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(8721,)
 </pre></div>
 </div>
 </div>
@@ -1450,7 +1451,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-b2a9f485-58ed-440f-9df6-8837c0644e57" class="colab-df-container">
+  <div id="df-f580f2b7-1a74-4a1e-8928-c39d5c0213de" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1480,6 +1481,7 @@ document.write(`
       <th>8</th>
       <th>9</th>
       <th>...</th>
+      <th>8710</th>
       <th>8711</th>
       <th>8712</th>
       <th>8713</th>
@@ -1489,90 +1491,89 @@ document.write(`
       <th>8717</th>
       <th>8718</th>
       <th>8719</th>
-      <th>8720</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
+      <td>0.202415</td>
       <td>0.200000</td>
-      <td>2.187554</td>
-      <td>0.2</td>
-      <td>0.204958</td>
-      <td>0.200905</td>
       <td>1.2</td>
+      <td>0.20236</td>
       <td>0.2</td>
-      <td>4.200001</td>
-      <td>0.2</td>
-      <td>0.202821</td>
+      <td>1.197704</td>
+      <td>0.228225</td>
+      <td>2.193642</td>
+      <td>0.200379</td>
+      <td>0.200085</td>
       <td>...</td>
       <td>0.2</td>
+      <td>0.201765</td>
+      <td>1.2</td>
       <td>0.2</td>
       <td>0.200000</td>
-      <td>16.2</td>
-      <td>0.2</td>
-      <td>0.20000</td>
-      <td>0.200000</td>
-      <td>3.199981</td>
-      <td>1.2</td>
-      <td>1.2</td>
+      <td>3.2</td>
+      <td>4.2</td>
+      <td>3.2</td>
+      <td>0.200532</td>
+      <td>0.200532</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>0.203051</td>
-      <td>0.201927</td>
+      <td>1.197585</td>
+      <td>2.193312</td>
       <td>0.2</td>
-      <td>1.200000</td>
+      <td>1.20000</td>
+      <td>2.2</td>
+      <td>0.201178</td>
+      <td>3.171775</td>
+      <td>4.200002</td>
       <td>0.200000</td>
-      <td>0.2</td>
-      <td>3.2</td>
-      <td>2.199999</td>
-      <td>1.2</td>
-      <td>1.208050</td>
+      <td>0.201086</td>
       <td>...</td>
       <td>0.2</td>
-      <td>1.2</td>
-      <td>0.203526</td>
-      <td>0.2</td>
-      <td>0.2</td>
-      <td>0.20287</td>
-      <td>0.202795</td>
       <td>0.200000</td>
       <td>0.2</td>
+      <td>16.2</td>
+      <td>8.197079</td>
       <td>0.2</td>
+      <td>0.2</td>
+      <td>0.2</td>
+      <td>1.199468</td>
+      <td>1.199468</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>1.196949</td>
-      <td>0.210519</td>
-      <td>1.2</td>
-      <td>1.195042</td>
-      <td>2.199095</td>
+      <td>0.200000</td>
+      <td>0.206688</td>
+      <td>0.2</td>
+      <td>1.19764</td>
+      <td>0.2</td>
+      <td>0.201118</td>
+      <td>0.200000</td>
+      <td>0.206356</td>
+      <td>1.199621</td>
+      <td>5.198829</td>
+      <td>...</td>
+      <td>2.2</td>
+      <td>1.198234</td>
+      <td>0.2</td>
+      <td>0.2</td>
+      <td>0.202921</td>
+      <td>0.2</td>
       <td>0.2</td>
       <td>0.2</td>
       <td>0.200000</td>
-      <td>0.2</td>
-      <td>4.189130</td>
-      <td>...</td>
-      <td>2.2</td>
-      <td>0.2</td>
-      <td>1.196474</td>
-      <td>0.2</td>
-      <td>8.2</td>
-      <td>3.19713</td>
-      <td>4.197205</td>
-      <td>0.200019</td>
-      <td>0.2</td>
-      <td>0.2</td>
+      <td>0.200000</td>
     </tr>
   </tbody>
 </table>
-<p>3 rows × 8721 columns</p>
+<p>3 rows × 8720 columns</p>
 </div>
     <div class="colab-df-buttons">
       
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-b2a9f485-58ed-440f-9df6-8837c0644e57')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f580f2b7-1a74-4a1e-8928-c39d5c0213de')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
       
@@ -1624,12 +1625,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-b2a9f485-58ed-440f-9df6-8837c0644e57 button.colab-df-convert');
+        document.querySelector('#df-f580f2b7-1a74-4a1e-8928-c39d5c0213de button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-b2a9f485-58ed-440f-9df6-8837c0644e57');
+        const element = document.querySelector('#df-f580f2b7-1a74-4a1e-8928-c39d5c0213de');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1692,6 +1693,15 @@ document.write(`
         <p class="prev-next-subtitle">previous</p>
         <p class="prev-next-title">Term Frequency</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="Lda%20dan%20Klasifikasi.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">&lt;no title&gt;</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
